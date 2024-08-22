@@ -1,0 +1,539 @@
+/* aca empiezo a configurar el navbar el cual tengo el logo de la empresa y la configuración del navbar para que se muestre en la parte de arriba */
+#boronsvg{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+#navbar{
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 33px;
+}
+
+#navbar ul{
+ list-style: none;
+ display: flex;
+ align-items: center;
+ margin-left: 0%;
+ padding: 0%;
+}
+
+#navbar li{
+    margin: 10px;
+    font-size: 1.128rem;
+}
+/* Acá se empieza agregando un h1 de titulo de bienvendia con su estilo  */
+#h1text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    font-size: 150px;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+/* lo que hice fue desde figma agrupar la imagen ya que no tenia interacción y ponerla por debajo del texto*/
+#h1text img {
+ margin-left: 200px;
+}
+
+/* igual que en el anterior ya que no le agregue animación puse la imagen en el div */
+.carrusel{
+    margin-left: 200px;
+    max-width: 100%;
+}
+
+/*Acá es la parte donde un div le agregamos un texto lo centramos y modificamos el estilo y color */
+.textoconfondo {
+    font-size: 4rem ;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #FF5E43 ;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+}
+/* En esta parte decidí hacerlo con display flex para el div global y luego cada div imagen y texto trabajarlos por separado*/
+#enfoque{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100% ;
+    display: flex;
+    text-align: center;
+}
+.textoenfoque {
+    background-color: #77D7DB;
+    margin: 0;
+    padding: 0;
+}
+
+.textoenfoque h4 {
+margin-left: -35rem;
+padding-top: 5rem;
+font-size: 1rem;
+}
+
+.textoenfoque p{
+    font-size: x-large;
+    padding: 15rem;
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+    place-items: center;
+    font-size: 1.5;
+}
+.imagenfoque{
+    max-width: 100%;
+}
+
+/*seguí los mismos pasos que en la parte de enfoque*/
+
+#seguinos {
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.twitterimg{
+    background-color: #1DA1F2;
+    text-align: left;
+}
+
+.twitterimg img {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    display: block;
+}
+
+a {
+    color: beige;
+}
+
+.borntwitter a {
+margin: 3rem;
+}
+
+.twitterimg p {
+    max-width: 100%;
+    background-color:#1DA1F2 ;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+#flechas {
+    display: flex;
+    text-align: center;
+    max-width: 90%;
+    justify-content: space-between;
+}
+
+/* En la parte de repositorio no queria ocupar el 100% entonces lo centre con el width hice las lineas con un div y lo hice box , luego use div para dividir titulo y cuerpo*/ 
+/*en la parte del cuerpo use display flex para ordenar el texto con las imagenes de las flechas*/
+
+#repositorio {
+    align-content: center;
+    width: 60%;
+    max-width: 100%;
+    margin-left: 20rem;
+}
+.repotitle {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+    width: 25%;
+}
+
+.repotitle h1{
+    font-size: 72px;
+    vertical-align: center;
+    width: 100%;
+    align-content: center;
+}
+
+.repotitle p {
+    margin-left: 45rem;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.linea {
+    display: flex;
+    border: solid black 0.1rem;
+    width: 100%;
+}
+.opciones p {
+    display: flex;
+    width: 100%;
+    font-size: 42px;
+    justify-content: space-between;
+}
+
+/* empezamos con el hover al pasar el mouse en la flecha primero arme un div con una imagen y lo oculte para que no apareciera */
+/*luego acomode esa imagen segun tamaño y repetición no supe como subirlo para que quedara mas cerca de la flecha*/
+.imagenho {
+    display: none;
+   background-image: url(/img/perr);
+   background-repeat: none;
+   width: 10rem;
+   height: 10rem;
+   margin: 0;
+   position: absolute;
+}
+/* acá use una sub class es decir al hacer hoover en la flecha hacemos que cambie el display mi div anterior para que se muestre */
+.opciones p:hover + .imagenho {
+    display: block;
+    margin-top: 0;
+    margin-left: 60rem;
+}
+
+
+/* CSS de novedades*/
+
+/* en esta sección me plantie dividir mi div en 4 partes iguales usando display grid y luego dividirlo en columnas 4 iguales*/
+/* arme 4 divs y los modifique a cada uno segun el color y posiciones deseadas*/
+
+#novedades{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+   height: 100%;
+   padding: 0;
+   margin-bottom: 2rem;
+}
+
+.webinar {
+    background-color: #40B5E0;
+    width: 100%;
+}
+
+.webinar h3 {
+    font-size: x-large;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.webinar p {
+    font-size: x-large;
+    margin-left: 1rem;
+    margin-top: 10rem;
+    align-content: center;
+}
+
+
+.evento {
+    background-color: #44D19D;
+    width: 100%;
+}
+
+.evento h3 {
+    font-size: x-large;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.evento p {
+    font-size: x-large;
+    margin-left: 1rem;
+    margin-top: 10rem;
+    align-content: center;
+}
+
+
+.publicacion {
+    background-color: #FEDA3C;
+    width: 100%;
+}
+
+.publicacion p {
+    font-size: x-large;
+    margin-left: 1rem;
+    margin-top: 10rem;
+    align-content: center;
+}
+.publicacion h3 {
+    font-size: x-large;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.conimagen {
+    width: 100%;
+}
+.conimagen img{
+    display: flex;
+    margin-left: 27rem;
+    margin-top: 2rem;
+}
+
+.conimagen p {
+    font-size: x-large;
+    margin-left: 1rem;
+    margin-top: 10rem;
+    align-content: center;
+}
+
+/* luego de modificar cada uno empece a ponerle los hovers necesarios que para cuando pase el mouse se modifique por la imagen */
+/* no pude hacer que un div en especifico en la parte superior se modificara, en si podia pero me agarraba un tamaño pequeño el div */
+
+.conimagen:hover{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/annie-spratt-QckxruozjRg-unsplash.svg);
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+    
+}
+
+.publicacion:hover {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/publicacion.svg);
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+}
+
+.evento:hover{
+    width: 100%;
+    background-image: url(/img/evento.svg);
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+}
+
+.webinar:hover{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/webinar.svg);
+    background-size: cover;
+    background-repeat: none;
+    color: white;
+}
+
+
+
+
+/* Acá en el footer aplique el mismo pensamiento que en la parte anterior , dividi el footer en 3 partes y tambíen arme un boton de suscripción*/
+#footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid: 10rem;
+    background-color: black;
+}
+
+.bornlogo{
+    padding: 5rem;
+}
+
+button{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: x-large;
+    width: 100%;
+    height: 5rem;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 2%;
+}
+
+.flecha {
+    margin-left: 2rem;
+}
+
+.infofooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 10rem;
+    font-size: x-large;
+}
+
+.infofooter img{
+    margin-left: 15rem;
+    width: 10%;
+}
+
+.acerca{
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    margin-top: 5rem;
+    color: white;
+    font-size:larger;
+}
+
+/*Responsive  menu*/
+
+/* en esta parte intente armar el menu hamburgesa primero modificamos nuestro html creando un div hamburger con span*/
+/*en eta parte es la modificación del menu y con display none para que no se mostrara hasta que estuviera en la resolución correcta*/
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 40rem; 
+}
+/*modificación del span */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+
+.navbar-menu {
+    display: flex;
+}
+
+/* cuando estemos mayor que 769 px se mostrará el menu normal entero*/
+@media (min-width: 769px) {
+    #navbar ul {
+        display: flex; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: none; 
+}
+
+/* cuando  la pantalla este en 850px el navbar se ocultara hasta que sea modificado por el JS que lo llama*/
+@media (max-width: 850px) {
+    #navbar ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        color: black;
+        padding: 1rem;
+        background-color: white;
+        position: absolute;
+        top: 60px; 
+        left: -2rem;
+        text-align: center;
+        z-index: 1000;
+    }
+/* esto dice que cuando se active el UL del navbar se mostrará con display flex*/
+    #navbar ul.active {
+        display: flex; 
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+}
+
+/* esta propiedad es añadida desde el js y tiene que ver con el scrolleo de nuestro navbar*/
+#navbar.scrolled {
+    display: none;
+}
+/* estos componentes eliguen los span que antes creamos en el HTML cuando estan en estado activo y modifica su rotación y movimiento*/
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+}
+
+/* media de parte de la pagina para cambios de tamaño*/
+
+@media (max-width:850px) {
+
+    #h1text{
+        width: 100%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        align-items: center;
+        font-size: 50px;
+        display: grid;
+        vertical-align: middle;
+        margin-left: 50px;
+    }
+    #h1text img {
+        width: 100%;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+    }
+
+    #enfoque{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        max-width: 100% ;
+        display: grid;
+        text-align: center;
+        font-size: small;
+    }
+    
+    #seguinos{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        max-width: 100% ;
+        display: grid;
+        text-align: center;
+        font-size: small;
+    }
+
+    #repositorio{
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        display: grid;
+        text-align: center;
+        font-size: small;
+    }
+    
+    .opciones p{
+        display: grid;
+        width: 100%;
+        font-size: 42px;
+        justify-content: space-between;
+    }
+
+    #novedades{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 10px;
+
+    }
+
+    #footer{
+        width: 100%;
+        display:grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+}
